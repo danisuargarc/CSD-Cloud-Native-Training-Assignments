@@ -1,4 +1,4 @@
-Query / Find Documents
+- Query / Find Documents
 
 1. get all documents
 db.movies.find().pretty()
@@ -18,7 +18,7 @@ db.movies.find({$and : [{"year" : {$gt: 1989}}, {"year" : {$lt: 2000}}]}).pretty
 6. get all movies released before the year 2000 or after 2010
 db.movies.find({$or : [{"year" : {$gt: 2010}}, {"year" : {$lt: 2000}}]}).pretty()
 
-Update Documents
+- Update Documents
 
 1. add a synopsis to "The Hobbit: An Unexpected Journey" : "A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."
 db.movies.update({"title" : "The Hobbit: An Unexpected Journey"}, {$set : {"synopsis" : "A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."}})
@@ -29,7 +29,7 @@ db.movies.update({"title" : "The Hobbit: The Desolation of Smaug"}, {$set : {"sy
 3. add an actor named "Samuel L. Jackson" to the movie "Pulp Ficton"
 db.movies.update({"title" : "Pulp Fiction"}, {$push: {actors: "Samuel L. Jackson"}})
 
-Text Search
+- Text Search
 
 1. find all movies that have a synopsis that contains the word "Bilbo"
 db.movies.find({"synopsis" : /Bilbo/}).pretty()
@@ -46,7 +46,7 @@ db.movies.find({$or : [{"synopsis" : /dwarves/}, {"synopsis" : /hobbit/}]}).pret
 5. find all movies that have a synopsis that contains the word "gold" and "dragon"
 db.movies.find({$and : [{"synopsis" : /gold/}, {"synopsis" : /dragon/}]}).pretty()
 
-Delete Documents
+- Delete Documents
 
 1. delete the movie "Pee Wee Herman's Big Adventure"
 db.movies.remove().find({title:"Pee Wee Herman's Big Adventure"})
@@ -54,7 +54,7 @@ db.movies.remove().find({title:"Pee Wee Herman's Big Adventure"})
 2. delete the movie "Avatar"
 db.movies.remove().find({title:"Avatar"})
 
-Querying related collections
+- Querying related collections
 
 1. find all users
 db.users.find().pretty()
