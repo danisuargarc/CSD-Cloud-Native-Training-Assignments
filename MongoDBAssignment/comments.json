@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "600f9919d0dcac43fcf0a418"
+  },
+  "username": "GoodGuyGreg",
+  "comment": "Hope you got a good deal!",
+  "post": "600f92aa8e9a435368956dc3"
+},{
+  "_id": {
+    "$oid": "600f9919d0dcac43fcf0a419"
+  },
+  "username": "GoodGuyGreg",
+  "comment": "What's mine is yours!",
+  "post": "600f92c08e9a435368956dc4"
+},{
+  "_id": {
+    "$oid": "600f9919d0dcac43fcf0a41a"
+  },
+  "username": "GoodGuyGreg",
+  "comment": "Don't violate the licensing agreement!",
+  "post": "600f92d88e9a435368956dc5"
+},{
+  "_id": {
+    "$oid": "600f9919d0dcac43fcf0a41b"
+  },
+  "username": "ScumbagSteve",
+  "comment": "It still isn't clean",
+  "post": "600f92448e9a435368956dc0"
+},{
+  "_id": {
+    "$oid": "600f9919d0dcac43fcf0a41c"
+  },
+  "username": "ScumbagSteve",
+  "comment": "Denied your PR cause I found a hack",
+  "post": "600f92898e9a435368956dc2"
+}]
