@@ -21,7 +21,7 @@ db.zipcodes.aggregate([
 {$project: {_id: 0, totalATLpop: 1}}
 ]).pretty()
 
-Populations By State
+- Populations By State
 
 1. use aggregate to calculate the total population for each state
 db.zipcodes.aggregate([
@@ -41,7 +41,7 @@ db.zipcodes.aggregate([
 {$limit: 3}
 ]).pretty()
 
-Populations by City
+- Populations by City
 
 1. use aggregate to calculate the total population for each city (you have to use city/state combination). You can use a combination for the _id of the $group: { city:'$city', state:'$state' }
 db.zipcodes.aggregate([
@@ -69,7 +69,7 @@ db.zipcodes.aggregate([
 {$limit: 3}
 ]).pretty()
 
-Bonus
+- Bonus
 
 1. Write a query to get the average city population for each state.
 db.zipcodes.aggregate([
