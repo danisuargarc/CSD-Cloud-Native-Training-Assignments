@@ -1,4 +1,4 @@
-Atlanta Population
+- Atlanta Population
 
 1. use db.zipcodes.find() to filter results to only the results where city is ATLANTA and state is GA.
 db.zipcodes.find({$and : [{"city" : "ATLANTA"}, {"state" : "GA"}]}).pretty()
