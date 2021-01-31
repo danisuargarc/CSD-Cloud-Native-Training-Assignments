@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="customer" class="spring.core.assignment.Customer" init-method="myInit" destroy-method="myDestroy">
+		<constructor-arg value="101" />
+		<constructor-arg value="Daniel Garcia" />
+		<constructor-arg value="daniel@email.com" />
+		<constructor-arg ref="address" />
+	</bean>
+	<bean id="address" class="spring.core.assignment.Address">
+		<constructor-arg value="100 6th Street NE #110" />
+		<constructor-arg value="Atlanta" />
+		<constructor-arg value="Georgia" />
+		<constructor-arg value="30308" />
+		<constructor-arg value="USA" />
+	</bean>
+</beans>

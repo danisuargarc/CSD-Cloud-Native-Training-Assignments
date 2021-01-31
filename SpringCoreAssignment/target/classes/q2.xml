@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="questionList" class="spring.core.assignment.Question">
+		<constructor-arg value="101" />
+		<constructor-arg value="What is your favorite color?" />
+		<constructor-arg type="List">
+			<list>
+				<value>Red</value>
+				<value>Orange</value>
+				<value>Yellow</value>
+				<value>Green</value>
+				<value>Blue</value>
+				<value>Indigo</value>
+				<value>Violet</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="questionSet" class="spring.core.assignment.Question">
+		<constructor-arg value="101" />
+		<constructor-arg value="What is your favorite color?" />
+		<constructor-arg type="Set">
+			<set>
+				<value>Red</value>
+				<value>Orange</value>
+				<value>Yellow</value>
+				<value>Green</value>
+				<value>Blue</value>
+				<value>Indigo</value>
+				<value>Violet</value>
+			</set>
+		</constructor-arg>
+	</bean>
+	<bean id="questionMap" class="spring.core.assignment.Question">
+		<constructor-arg value="101" />
+		<constructor-arg value="What is your favorite color?" />
+		<constructor-arg type="Map">
+			<map>
+				<entry key="0" value="Red"/>
+				<entry key="1" value="Orange"/>
+				<entry key="2" value="Yellow"/>
+				<entry key="3" value="Green"/>
+				<entry key="4" value="Blue"/>
+				<entry key="5" value="Indigo"/>
+				<entry key="6" value="Violet"/>
+			</map>
+		</constructor-arg>
+	</bean>
+</beans>
