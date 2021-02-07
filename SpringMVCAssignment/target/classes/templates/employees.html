@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Employees</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<table style="border: 1px solid black; border-collapse: collapse;">
+		<tr style="border: 1px solid black; border-collapse: collapse;">
+			<th style="border: 1px solid black; border-collapse: collapse;">Employee Id</th>
+			<th style="border: 1px solid black; border-collapse: collapse;">Employee Name</th>
+			<th style="border: 1px solid black; border-collapse: collapse;">Employee Department</th>
+			<th style="border: 1px solid black; border-collapse: collapse;">Employee Designation</th>
+			<th style="border: 1px solid black; border-collapse: collapse;">Employee Salary</th>
+			<th style="border: 1px solid black; border-collapse: collapse;">Update</th>
+			<th style="border: 1px solid black; border-collapse: collapse;">Delete</th>
+		</tr>
+		<tr th:each="emp : ${employees}" style="border: 1px solid black; border-collapse: collapse;">
+			<td th:text="${emp.id}" style="border: 1px solid black; border-collapse: collapse;"></td>
+			<td th:text="${emp.name}" style="border: 1px solid black; border-collapse: collapse;"></td>
+			<td th:text="${emp.department}" style="border: 1px solid black; border-collapse: collapse;"></td>
+			<td th:text="${emp.designation}" style="border: 1px solid black; border-collapse: collapse;"></td>
+			<td th:text="${emp.salary}" style="border: 1px solid black; border-collapse: collapse;"></td>
+			<td><a th:href="@{'/ems/edit'(id=${emp.id})}" style="border: 1px solid black; border-collapse: collapse;">Edit</a></td>
+			<td><a th:href="@{'/ems/delete'(id=${emp.id})}" style="border: 1px solid black; border-collapse: collapse;">Delete</a></td>
+		</tr>
+	</table>
+</body>
+<footer>
+	<p>
+		<a href="/">Back to Home</a>
+	</p>
+	<br>
+</footer>
+</html>
