@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Employees</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<table style="border: 1px solid black;">
+		<tr style="border: 1px solid black;">
+			<th style="border: 1px solid black; width: 75px;">Id</th>
+			<th style="border: 1px solid black; width: 150px;">Name</th>
+			<th style="border: 1px solid black; width: 150px;">Salary</th>
+		</tr>
+		<tr th:each="emp : ${employees}" style="border: 1px solid black;">
+			<td th:text="${emp.id}" style="border: 1px solid black;"></td>
+			<td th:text="${emp.name}" style="border: 1px solid black;"></td>
+			<td th:text="${emp.salary}" style="border: 1px solid black;"></td>
+		</tr>
+	</table>
+	<p>
+		<span  th:each="page : ${pages}">
+			<a th:href="@{'/ems/employeesList/'(page=${page})}" th:text="${page}"></a>
+		</span>
+	</p>
+</body>
+<footer>
+	<p>
+		<a href="/">Back to Home</a>
+	</p>
+	<br>
+</footer>
+</html>

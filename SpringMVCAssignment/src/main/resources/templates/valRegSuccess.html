@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Success</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p>Registration success!</p><br>
+    <p th:text='${customer.username}'/>
+    <p th:text='${customer.password}'/>
+    <p th:text='${customer.email}'/>
+    <p th:text='${customer.contact}'/>
+    <p th:text='${customer.city}'/>
+    <p th:text='${customer.zipcode}'/>
+</body>
+<footer>
+	<p><a href="/">Back to Home</a></p><br>
+</footer>
+</html>

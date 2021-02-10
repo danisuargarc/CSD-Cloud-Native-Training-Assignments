@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title th:text="#{title}">International Login</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p style="background-color: LightGray; text-align: right;">
+		<a th:text="#{english}" href="internationalLogin?lang=en"></a>&nbsp;&nbsp;
+		<a th:text="#{french}" href="internationalLogin?lang=fr"></a>&nbsp;&nbsp;
+		<a th:text="#{vietnamese}" href="internationalLogin?lang=vi"></a>
+	</p>
+    <form>
+    	<label th:text="#{username}"></label>
+    	<input type="text" name="username"><br>
+    	<label th:text="#{password}"></label>
+    	<input type="password" name="password"><br>
+    	<input th:value="#{login}" type="submit"/>
+    </form>
+</body>
+<footer>
+	<p><a th:text="#{backToHome}" href="/"></a></p><br>
+</footer>
+</html>
