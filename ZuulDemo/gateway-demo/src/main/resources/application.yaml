@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+zuul:
+  routes:
+    doctors:
+      url: http://localhost:8081
+    patients:
+      url: http://localhost:8082
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
