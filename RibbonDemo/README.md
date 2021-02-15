@@ -1,0 +1,3 @@
+- Communication and Discovery using Eureka
+- Client Side Load Balancer using Netflix Ribbon
+- Declarative REST Client using Feign Client
