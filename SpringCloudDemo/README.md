@@ -1,2 +1,1 @@
-Communication and Discovery using Eureka
-Circuit Breaker Using Netflix Hystrix
+Communication and Discovery using Eureka + Circuit Breaker Using Netflix Hystrix
